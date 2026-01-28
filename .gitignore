@@ -12,3 +12,30 @@ Thumbs.db
 # Ignore virtual environments
 venv/
 .env
+
+# --- API & Security ---
+# Never upload your Gemini/OpenAI API keys
+.env
+secret_keys.txt
+
+# --- HR Data Privacy ---
+# Do not upload real candidate resumes or data
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# --- Python System Files ---
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.venv/
+env/
+
+# --- Jupyter Notebooks ---
+.ipynb_checkpoints/
+
+# --- OS Specific ---
+.DS_Store
+Thumbs.db
