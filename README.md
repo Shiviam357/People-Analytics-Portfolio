@@ -28,3 +28,10 @@ A three-stage pipeline that:
 2.  Add your Job Description to `job_description.txt`.
 3.  Run `python main.py`.
 4.  View results in `output/analysis.json`.
+
+### 📂 Project Structure
+
+- `data/raw/`: Store original PDF/Docx resumes here.
+- `src/extractor.py`: Contains Regex logic to pull PII (Name, Email, Phone).
+- `src/csv_manager.py`: Handles the conversion of extracted data into `candidates.csv`.
+- `main.py`: The entry point that runs the full pipeline.
