@@ -1,0 +1,22 @@
+import csv
+import file_convert
+import info_extract
+
+# 1. Start the CSV file
+with open('results.csv', 'w', newline='') as f:
+    writer = csv.writer(f)
+    writer.writerow(['File Name', 'Email', 'Phone']) # The Header
+
+    from file_magic import pdf_files
+
+    for pdf_path in pdf_files:
+        # 1. Correct the path to include the 'Incoming' folder
+        full_path = f"Incoming/{pdf_path}"
+        
+        # 2. Pass the full_path to the conversion function
+        text = file_convert.get_pdf_text(full_path)
+        
+        # 3. Extract and write as before
+        email = info_extract.find_email(text)
+        phone = info_extract.find_phone(text)
+        writer.writerow([pdf_path, email, phone])
