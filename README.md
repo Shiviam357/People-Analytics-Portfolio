@@ -3,6 +3,17 @@
 ## **Overview**
 This project is a miniature Applicant Tracking System (ATS) designed to automate the initial screening of candidates. By leveraging Python for data extraction and Generative AI for rational interpretation, this tool reduces the manual "first-look" time for recruiters by approximately 70%.
 
+## 📁 Project Structure
+- **data/**: Contains sample resumes (PDF format).
+- **src/parser.py**: Main extraction engine using Regular Expressions.
+- **src/writer.py**: Script to aggregate results into a structured CSV.
+- **output/candidates.csv**: The final processed dataset ready for HR analysis.
+
+## ⚙️ Features
+- **PII Extraction**: Automatically pulls contact details from messy PDF text.
+- **Data Normalization**: Handles missing values by marking them as "Not Found" for manual review.
+- **Scalable Design**: Process a single file or an entire directory of resumes.
+
 ## **Problem Statement**
 In high-volume recruitment (US Staffing), recruiters spend hours scanning resumes that often don't match the Job Description. Standard keyword-based ATS tools often miss qualified candidates who use different terminology (e.g., "Python Developer" vs. "Backend Engineer").
 
